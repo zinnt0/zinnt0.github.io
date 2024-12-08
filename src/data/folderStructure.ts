@@ -1,5 +1,20 @@
 import { MainFolder } from '../types/folder';
 
+/*
+# Make your changes to the project files
+
+# Build the project
+npm run build
+
+# Deploy the changes to GitHub Pages
+npm run deploy
+
+# Commit and push your changes to the repository
+git add .
+git commit -m "Your commit message"
+git push origin main
+*/
+
 export const folderStructure: MainFolder[] = [
   {
     name: "WP Informatik",
@@ -9,7 +24,7 @@ export const folderStructure: MainFolder[] = [
         files: [
           {
             name: "Aufgabenbeschreibung",
-            url: "h",
+            url: "https://github.com/zinnt0/Schuelermaterialien/blob/21f4a54588ca3f33068f144c3f3f8119aa7447e2/Aufgabenstellung.pdf",
             target: "_blank"
             
           },
