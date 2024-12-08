@@ -24,13 +24,13 @@ export const folderStructure: MainFolder[] = [
         files: [
           {
             name: "Aufgabenbeschreibung",
-            url: "https://github.com/zinnt0/Schuelermaterialien/blob/21f4a54588ca3f33068f144c3f3f8119aa7447e2/Aufgabenstellung.pdf",
+            url: "https://github.com/zinnt0/Schuelermaterialien/blob/b3c5b9793176a0b9aba6609d65d6df117fec26ca/WP%20Informatik/Aufgabenstellung.pdf",
             target: "_blank"
             
           },
           {
             name: "Spielvorlage",
-            url: "",
+            url: "https://github.com/zinnt0/Schuelermaterialien/blob/b3c5b9793176a0b9aba6609d65d6df117fec26ca/WP%20Informatik/Spielvorlage.py",
             target: "_blank"
             
           }
