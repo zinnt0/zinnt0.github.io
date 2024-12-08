@@ -9,7 +9,7 @@ export const folderStructure: MainFolder[] = [
         files: [
           {
             name: "Aufgabenbeschreibung",
-            url: "https://drive.google.com/file/d/1jRkLmR7mtyj4ZA9_UdbjZbXg24VxHFpL/view?usp=drive_link",
+            url: "https://raw.github.com/zinnt0/Sch-lermaterialien/blob/21f4a54588ca3f33068f144c3f3f8119aa7447e2/Aufgabenstellung.pdf",
             target: "_blank"
             
           },
