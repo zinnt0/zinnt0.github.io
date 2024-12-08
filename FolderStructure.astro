@@ -1,0 +1,100 @@
+---
+import { Folder, FileDown } from "lucide-astro";
+
+interface SubFolder {
+  name: string;
+  files?: File[];
+}
+
+interface MainFolder {
+  name: string;
+  subFolders: SubFolder[];
+}
+
+interface File {
+  name: string;
+  url: string;
+  taret?: string;
+}
+
+const structure: MainFolder[] = [
+  {
+    name: "WP",
+    subFolders: [
+      {
+        name: "Python Text Adventure",
+        files: [],
+      },
+    ],
+  },
+  {
+    name: "Physik 10",
+    subFolders: [
+      {
+        name: "Kraft",
+        files: [],
+      },
+    ],
+  },
+  {
+    name: "Informatik 6er",
+    subFolders: [
+      {
+        name: "Daten",
+        files: [],
+      },
+    ],
+  },
+  {
+    name: "Physik 8er",
+    subFolders: [
+      {
+        name: "Planeten",
+        files: [],
+      },
+    ],
+  },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+  {
+    structure.map((mainFolder) => (
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <Folder class="w-6 h-6 text-blue-600" />
+          <h2 class="text-xl font-bold text-gray-800">{mainFolder.name}</h2>
+        </div>
+        <div class="space-y-4 pl-6">
+          {mainFolder.subFolders.map((subFolder) => (
+            <div class="border-l-2 border-gray-200 pl-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Folder class="w-5 h-5 text-blue-400" />
+                <h3 class="text-lg font-semibold text-gray-700">
+                  {subFolder.name}
+                </h3>
+              </div>
+              {subFolder.files && subFolder.files.length > 0 ? (
+                <div class="space-y-2 pl-7">
+                  {subFolder.files.map((file) => (
+                    <a
+                      href={file.url}
+                      class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    >
+                      <FileDown class="w-4 h-4" />
+                      <span>{file.name}</span>
+                    </a>
+                  ))}
+                </div>
+              ) : (
+                <p class="text-sm text-gray-500 italic pl-7">
+                  No files uploaded yet
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>
